@@ -1,0 +1,26 @@
+{
+  // 新規ウィンドウを最後に開いたウィンドウと同じサイズで開く
+  "window.newWindowDimensions": "inherit",
+  // タブ幅指定
+  "editor.tabSize": 2,
+  // 空白文字を可視化。none, all, boundary：単語間の単一スペースは可視化しない。
+  "editor.renderWhitespace": "boundary",
+  "workbench.colorCustomizations": {
+    "tab.activeBackground": "#7442AD",
+    "tab.activeForeground": "#D3D2D4",
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false,
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "hediet.vscode-drawio.resizeImages": null,
+  "editor.formatOnSave": true,
+}
