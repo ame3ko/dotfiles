@@ -35,6 +35,57 @@ dotfiles/
 
 ---
 
+## シンボリックリンクとは
+
+**ファイルの「分身（ショートカット）」を作る仕組み。** 実体は dotfiles リポジトリ内の 1 箇所だけに置き、各ツールが読み込むパスにはその分身を置く。
+
+```
+【通常のファイル配置（問題あり）】
+~/.claude/CLAUDE.md   ← Claude Code が読む実体
+~/.cursor/rules       ← Cursor が読む実体（別ファイル → 二重管理になる）
+
+【シンボリックリンクを使った配置（このリポジトリの方式）】
+~/dotfiles/claude/CLAUDE.md   ← 実体（ここだけ編集すればよい）
+        ↑                ↑
+~/.claude/CLAUDE.md   ~/.cursor/rules   ← 両方ともリンク（分身）
+```
+
+**メリット:**
+- 設定を編集する場所は dotfiles の 1 箇所だけ
+- 各ツールは従来通りのパスからファイルを読む（ツール側の設定変更不要）
+- git で変更履歴を管理できる
+
+---
+
+## scripts/setup.sh の仕組み
+
+新しい端末で `setup.sh` を実行すると、以下の処理を自動で行う。
+
+```
+1. 設定ディレクトリの作成
+   mkdir -p ~/.claude
+   mkdir -p ~/.cursor
+   mkdir -p ~/Library/Application Support/Code/User
+   mkdir -p ~/Library/Application Support/Cursor/User
+
+2. シンボリックリンクの作成（ln -sf コマンド）
+   ln -sf ~/dotfiles/claude/CLAUDE.md     ~/.claude/CLAUDE.md
+   ln -sf ~/dotfiles/claude/settings.json ~/.claude/settings.json
+   ln -sf ~/dotfiles/claude/CLAUDE.md     ~/.cursor/rules        ← Cursor も同じ実体を参照
+   ln -sf ~/dotfiles/cursor/settings.json ~/Library/.../Cursor/User/settings.json
+   ln -sf ~/dotfiles/vscode/settings.json ~/Library/.../Code/User/settings.json
+```
+
+`ln -sf` コマンドの意味：
+
+| オプション | 意味 |
+|-----------|------|
+| `ln` | リンクを作成するコマンド |
+| `-s` | シンボリックリンク（symbolic）を作成する |
+| `-f` | 既にファイルが存在していても強制上書き（force）する |
+
+---
+
 ## セットアップ（新しい端末への展開）
 
 2 ステップで完了する。
