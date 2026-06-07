@@ -23,4 +23,5 @@
   "workbench.editor.pinnedTabsOnSeparateRow": true,
   "hediet.vscode-drawio.resizeImages": null,
   "editor.formatOnSave": true,
+  "claudeCode.preferredLocation": "panel",
 }
