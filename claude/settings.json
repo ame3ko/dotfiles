@@ -1,7 +1,35 @@
 {
-  "theme": "dark",
-  "skipAutoPermissionPrompt": true,
   "permissions": {
-    "defaultMode": "auto"
-  }
+    "allow": [
+      "Read(//Users/s.takasugi/.claude/**)",
+      "Read(//Users/s.takasugi/.cursor/**)",
+      "Read(//Users/s.takasugi/Library/Application Support/Cursor/User/**)",
+      "Read(//Users/s.takasugi/Library/Application Support/Code/User/**)",
+      "Read(//opt/homebrew/**)",
+      "Bash(set -x)",
+      "Bash(set +x)",
+      "Bash(python3 -c \"import json; json.load\\(open\\('/Users/s.takasugi/.claude/settings.json'\\)\\)\")",
+      "Bash(python3 -c \"import json; json.load\\(open\\('/Users/s.takasugi/Library/Application Support/Cursor/User/settings.json'\\)\\)\")",
+      "Bash(python3 -c \"import json; json.load\\(open\\('/Users/s.takasugi/Library/Application Support/Code/User/settings.json'\\)\\)\")",
+      "Bash(ln -s /Users/s.takasugi/dotfiles/vscode/settings.json '/Users/s.takasugi/Library/Application Support/Code/User/settings.json')",
+      "Bash(cp '/Users/s.takasugi/Library/Application Support/Cursor/User/settings.json' /Users/s.takasugi/dotfiles/cursor/settings.json)",
+      "Bash(rm '/Users/s.takasugi/Library/Application Support/Cursor/User/settings.json')",
+      "Bash(ln -s /Users/s.takasugi/dotfiles/cursor/settings.json '/Users/s.takasugi/Library/Application Support/Cursor/User/settings.json')",
+      "Bash(sysctl -n machdep.cpu.brand_string)",
+      "Bash(system_profiler SPHardwareDataType)",
+      "Bash(bash /Users/s.takasugi/dotfiles/scripts/session-start-check.sh)",
+      "Bash(npx next *)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(rm /Users/s.takasugi/Desktop/stride/.claude/.rules/git.md)"
+    ],
+    "defaultMode": "auto",
+    "additionalDirectories": [
+      "/Users/s.takasugi/Library/Application Support/Code/User",
+      "/Users/s.takasugi/Desktop/stride/.claude/.rules"
+    ]
+  },
+  "theme": "dark",
+  "skipAutoPermissionPrompt": true
 }
