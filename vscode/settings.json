@@ -1,27 +1,77 @@
 {
-  // 新規ウィンドウを最後に開いたウィンドウと同じサイズで開く
-  "window.newWindowDimensions": "inherit",
-  // タブ幅指定
-  "editor.tabSize": 2,
-  // 空白文字を可視化。none, all, boundary：単語間の単一スペースは可視化しない。
-  "editor.renderWhitespace": "boundary",
-  "workbench.colorCustomizations": {
-    "tab.activeBackground": "#7442AD",
-    "tab.activeForeground": "#D3D2D4"
-  },
-  "workbench.iconTheme": "material-icon-theme",
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[markdown]": {
-    "editor.formatOnSave": false
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.editor.pinnedTabsOnSeparateRow": true,
-  "hediet.vscode-drawio.resizeImages": null,
-  "editor.formatOnSave": true,
-  "claudeCode.preferredLocation": "panel"
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Dark Modern",
+    "workbench.startupEditor": "none",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": false,
+    "editor.minimap.enabled": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.linkedEditing": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.suggestSelection": "first",
+    "editor.wordWrap": "on",
+    "editor.renderWhitespace": "boundary",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500,
+    "files.trimTrailingWhitespace": true,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.defaultLocation": "editor",
+    "claudeCode.preferredLocation": "panel",
+    "workbench.activityBar.location": "top",
+    "workbench.iconTheme": "material-icon-theme",
+    "terminal.integrated.stickyScroll.enabled": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.sideBar.defaultVisibility": "visible",
+
+    "workbench.colorCustomizations": {
+        "[Dark Modern]": {
+            "focusBorder": "#9FE870",
+            "button.background": "#9FE870",
+            "button.foreground": "#163300",
+            "button.hoverBackground": "#8ed15f",
+            "progressBar.background": "#9FE870",
+            "activityBarBadge.background": "#9FE870",
+            "activityBarBadge.foreground": "#163300",
+            "textLink.foreground": "#9FE870",
+            "textLink.activeForeground": "#c3f5a3",
+            "list.activeSelectionBackground": "#1c2b12",
+            "list.inactiveSelectionBackground": "#15200d",
+            "list.focusOutline": "#9FE870",
+            "inputOption.activeBorder": "#9FE870",
+            "checkbox.background": "#1c2b12",
+            "checkbox.border": "#9FE870",
+
+            "statusBar.background": "#163300",
+            "statusBar.foreground": "#c3f5a3",
+            "statusBarItem.remoteBackground": "#9FE870",
+            "statusBarItem.remoteForeground": "#163300",
+
+            "tab.activeBorderTop": "#9FE870",
+            "tab.activeBackground": "#1c2b12",
+            "editorGroupHeader.tabsBackground": "#0f1a08",
+
+            "editorCursor.foreground": "#9FE870",
+            "editor.selectionBackground": "#2ED06E40",
+            "editor.selectionHighlightBackground": "#2ED06E30",
+            "editor.findMatchBackground": "#2ED06E60",
+            "editor.findMatchHighlightBackground": "#2ED06E30",
+            "editor.wordHighlightBackground": "#2ED06E30",
+            "editorLineNumber.activeForeground": "#9FE870",
+
+            "scrollbarSlider.background": "#9FE87030",
+            "scrollbarSlider.hoverBackground": "#9FE87050",
+            "scrollbarSlider.activeBackground": "#9FE87070",
+
+            "terminal.ansiGreen": "#2ED06E",
+            "terminal.ansiBrightGreen": "#9FE870",
+
+            "notificationCenterHeader.background": "#163300",
+            "extensionButton.prominentBackground": "#9FE870",
+            "extensionButton.prominentForeground": "#163300",
+            "extensionButton.prominentHoverBackground": "#8ed15f"
+        }
+    }
 }
